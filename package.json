@@ -1,5 +1,5 @@
 {
-  "name": "gulp-externs-extractor",
+  "name": "gulp-externs",
   "version": "0.0.1",
   "main": "bin/index.js",
 
@@ -16,6 +16,10 @@
 
   "devDependencies": {
     "gulp": "3.8.11"
+  },
+
+  "scripts": {
+    "test": "mocha"
   },
 
   "keywords": ["gulpplugin"]
