@@ -10,13 +10,6 @@ var util = {};
 
 
 /**
- * typedef {{showHidden: boolean=, depth: number=, colors: boolean=,
- *  customInspect: boolean=}}
- */
-util._InpsectOptions;
-
-
-/**
  * @param {...} var_args
  * @return {string}
  */
@@ -54,7 +47,7 @@ util.log = function(string) {};
 
 /**
  * @param {!Object} object
- * @param {util._InpsectOptions=} opt_options
+ * @param {!Object=} opt_options
  */
 util.inspect = function(object, opt_options) {};
 

@@ -10,12 +10,6 @@ var stream = {};
 
 
 /**
- * @typedef {{end: boolean=}}
- */
-stream._PipeOptions;
-
-
-/**
  * @event data
  * @event error
  * @event end
@@ -60,7 +54,7 @@ stream.ReadableStream.prototype.isPaused = function() {};
 
 /**
  * @param {!stream.Writable} destination
- * @param {stream._PipeOptions=} opt_options
+ * @param {!Object=} opt_options
  */
 stream.ReadableStream.prototype.pipe = function(destination, opt_options) {};
 

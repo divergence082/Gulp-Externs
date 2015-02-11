@@ -10,12 +10,6 @@ var console = {};
 
 
 /**
- * @typedef {{showHidden: boolean=, depth: number=, colors: boolean=}}
- */
-console._DirOptions;
-
-
-/**
  * @param {...} var_args
  */
 console.log = function(var_args) {};
@@ -41,7 +35,7 @@ console.warn = function(var_args) {};
 
 /**
  * @param {!Object} obj
- * @param {console._DirOptions=} opt_options
+ * @param {!Object=} opt_options
  */
 console.dir = function(obj, opt_options) {};
 
