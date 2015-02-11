@@ -1,0 +1,22 @@
+{
+  "name": "gulp-externs-extractor",
+  "version": "0.0.1",
+  "main": "bin/index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divergence082/Gulp-Externs-Extractor"
+  },
+
+  "dependencies": {
+    "externs-extractor-wrapper": "0.0.5",
+    "through2": "0.6.3",
+    "gulp-util": "3.0.3"
+  },
+
+  "devDependencies": {
+    "gulp": "3.8.11"
+  },
+
+  "keywords": ["gulpplugin"]
+}
