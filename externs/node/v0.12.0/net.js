@@ -134,8 +134,7 @@ net.Server.prototype.getConnections = function(callback) {};
  * @event error
  * @event close
  * @constructor
- * @extends {stream.ReadableStream}
- * @extends {stream.WritableStream}
+ * @extends {stream.Duplex}
  */
 net.Socket = function(opt_options) {};
 

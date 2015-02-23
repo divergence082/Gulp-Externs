@@ -130,15 +130,13 @@ stream.WritableStream.prototype.end =
 
 /**
  * @interface
- * @extends {stream.ReadableStream}
- * @extends {stream.WritableStream}
+ * @extends {stream.Duplex}
  */
 stream.Duplex = function() {};
 
 
 /**
  * @interface
- * @extends {stream.ReadableStream}
- * @extends {stream.WritableStream}
+ * @extends {stream.Duplex}
  */
 stream.Transform = function() {};
