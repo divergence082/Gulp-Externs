@@ -439,7 +439,7 @@ Buffer.prototype.fill = function(value, opt_offset, opt_end) {};
 
 
 /**
- * @interface
+ * @constructor
  * @extends {Buffer}
  */
 var SlowBuffer = function() {};

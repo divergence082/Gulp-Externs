@@ -53,7 +53,7 @@ net.isIPv6 = function(input) {};
 
 
 /**
- * @interface
+ * @constructor
  */
 net.__Connection = function() {};
 
@@ -190,7 +190,7 @@ net.Socket.prototype.bytesWritten;
 /**
  * @param {number} port
  * @param {string=} opt_host
- * @param {Function} opt_connectListener
+ * @param {Function=} opt_connectListener
  */
 net.Socket.prototype.connect = function(port, opt_host, opt_connectListener) {};
 

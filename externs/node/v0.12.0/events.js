@@ -12,7 +12,7 @@ var events = {};
  * @event newListener
  * @event removeListener
  *
- * @interface
+ * @constructor
  */
 events.EventEmitter = function() {};
 

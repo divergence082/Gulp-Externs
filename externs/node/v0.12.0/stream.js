@@ -16,7 +16,7 @@ var stream = {};
  * @event close
  * @event readable
  *
- * @interface
+ * @constructor
  * @extends {events.EventEmitter}
  */
 stream.ReadableStream = function() {};
@@ -85,7 +85,7 @@ stream.ReadableStream.prototype.wrap = function(stream) {};
  * @event unpipe
  * @event error
  *
- * @interface
+ * @constructor
  * @extends {events.EventEmitter}
  */
 stream.WritableStream = function() {};
@@ -129,14 +129,14 @@ stream.WritableStream.prototype.end =
 
 
 /**
- * @interface
+ * @constructor
  * @extends {stream.Duplex}
  */
 stream.Duplex = function() {};
 
 
 /**
- * @interface
+ * @constructor
  * @extends {stream.Duplex}
  */
 stream.Transform = function() {};
