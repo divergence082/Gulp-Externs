@@ -85,6 +85,6 @@ events.EventEmitter.prototype.listeners = function(event) {};
 
 /**
  * @param {...} var_args
- * @param {boolean}
+ * @return {boolean}
  */
 events.EventEmitter.prototype.emit = function(var_args) {};
