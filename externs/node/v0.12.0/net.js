@@ -52,29 +52,6 @@ net.isIPv4 = function(input) {};
 net.isIPv6 = function(input) {};
 
 
-/**
- * @constructor
- */
-net.__Connection = function() {};
-
-
-/**
- * @return {{port: number, family: string, address: string}}
- */
-net.__Connection.prototype.address = function() {};
-
-
-/**
- *
- */
-net.__Connection.prototype.unref = function() {};
-
-
-/**
- *
- */
-net.__Connection.prototype.ref = function() {};
-
 
 /**
  * @event listening
@@ -83,7 +60,6 @@ net.__Connection.prototype.ref = function() {};
  * @event error
  * @constructor
  * @extends {events.EventEmitter}
- * @extends {net.__Connection}
  */
 net.Server = function() {};
 
@@ -122,7 +98,24 @@ net.Server.prototype.getConnections = function(callback) {};
 
 
 /**
+ * @return {{port: number, family: string, address: string}}
+ */
+net.Server.prototype.address = function() {};
+
+
+/**
  *
+ */
+net.Server.prototype.unref = function() {};
+
+
+/**
+ *
+ */
+net.Server.prototype.ref = function() {};
+
+
+/**
  * @param {!Object=} opt_options
  *
  * @event lookup

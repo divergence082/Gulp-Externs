@@ -108,7 +108,7 @@ http.Server.prototype.setTimeout = function(msecs, callback) {};
  * @event finish
  * @constructor
  * @extends {events.EventEmitter]
- * @extends {stream.WritableStream]
+ * @implements {stream.IWritableStream}
  */
 http.ServerResponse = function() {};
 
