@@ -40,6 +40,7 @@ stream.ReadableStream.prototype.setEncoding = function(encoding) {};
  */
 stream.ReadableStream.prototype.resume = function() {};
 
+
 /**
  * @return {!stream.ReadableStream}
  */
@@ -53,14 +54,14 @@ stream.ReadableStream.prototype.isPaused = function() {};
 
 
 /**
- * @param {!stream.Writable} destination
+ * @param {!stream.WritableStream} destination
  * @param {!Object=} opt_options
  */
 stream.ReadableStream.prototype.pipe = function(destination, opt_options) {};
 
 
 /**
- * @param {!stream.Writable=} opt_destination
+ * @param {!stream.WritableStream=} opt_destination
  */
 stream.ReadableStream.prototype.unpipe = function(opt_destination) {};
 
@@ -121,8 +122,8 @@ stream.WritableStream.prototype.setDefaultEncoding = function(encoding) {};
 
 /**
  * @param {(!Buffer|string)=} opt_chunk
- * @param {string} opt_encoding
- * @param {Function} opt_callback
+ * @param {string=} opt_encoding
+ * @param {Function=} opt_callback
  */
 stream.WritableStream.prototype.end =
     function(opt_chunk, opt_encoding, opt_callback) {};
@@ -130,7 +131,8 @@ stream.WritableStream.prototype.end =
 
 /**
  * @constructor
- * @extends {stream.Duplex}
+ * @extends {stream.ReadableStream}
+ * @extends {stream.WritableStream}
  */
 stream.Duplex = function() {};
 
