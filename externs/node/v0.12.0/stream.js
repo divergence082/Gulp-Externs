@@ -150,8 +150,8 @@ stream.IWritableStream = function() {};
 
 /**
  * @param {(!Buffer|string)} chunk
- * @param {string} opt_encoding
- * @param {Function} opt_callback
+ * @param {string=} opt_encoding
+ * @param {Function=} opt_callback
  */
 stream.IWritableStream.prototype.write =
     function(chunk, opt_encoding, opt_callback) {};
