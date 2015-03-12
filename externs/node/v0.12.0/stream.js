@@ -88,57 +88,61 @@ stream.ReadableStream = function() {};
 
 
 /**
- * @inheritDoc
+ * @param {number=} opt_size
+ * @return {?(string|Buffer)}
  */
 stream.ReadableStream.prototype.read = function(opt_size) {};
 
 
 /**
- * @inheritDoc
+ * @param {string} encoding
+ * @return {!stream.ReadableStream}
  */
 stream.ReadableStream.prototype.setEncoding = function(encoding) {};
 
 
 /**
- * @inheritDoc
+ * @return {!stream.ReadableStream}
  */
 stream.ReadableStream.prototype.resume = function() {};
 
 
 /**
- * @inheritDoc
+ * @return {!stream.ReadableStream}
  */
 stream.ReadableStream.prototype.pause = function() {};
 
 
 /**
- * @inheritDoc
+ * @return {boolean}
  */
 stream.ReadableStream.prototype.isPaused = function() {};
 
 
 /**
- * @inheritDoc
+ * @param {!stream.WritableStream} destination
+ * @param {!Object=} opt_options
  */
 stream.ReadableStream.prototype.pipe = function(destination, opt_options) {};
 
 
 /**
- * @inheritDoc
+ * @param {!stream.WritableStream=} opt_destination
  */
 stream.ReadableStream.prototype.unpipe = function(opt_destination) {};
 
 
 /**
- * @inheritDoc
+ * @param {(!Buffer|string)} chunk
  */
 stream.ReadableStream.prototype.unshift = function(chunk) {};
 
 
 /**
- * @inheritDoc
+ * @param {*} stream
  */
 stream.ReadableStream.prototype.wrap = function(stream) {};
+
 
 
 /**
@@ -194,38 +198,42 @@ stream.IWritableStream.prototype.end =
  *
  * @constructor
  * @extends {events.EventEmitter}
- * @implements {stream.IWritableStream}
  */
 stream.WritableStream = function() {};
 
 
 /**
- * @inheritDoc
+ * @param {(!Buffer|string)} chunk
+ * @param {string=} opt_encoding
+ * @param {Function=} opt_callback
  */
 stream.WritableStream.prototype.write =
     function(chunk, opt_encoding, opt_callback) {};
 
 
 /**
- * @inheritDoc
+ *
  */
 stream.WritableStream.prototype.cork = function() {};
 
 
 /**
- * @inheritDoc
+ *
  */
 stream.WritableStream.prototype.uncork = function() {};
 
 
 /**
- * @inheritDoc
+ * @param {string} encoding
+ * @return {boolean}
  */
 stream.WritableStream.prototype.setDefaultEncoding = function(encoding) {};
 
 
 /**
- * @inheritDoc
+ * @param {(!Buffer|string)=} opt_chunk
+ * @param {string=} opt_encoding
+ * @param {Function=} opt_callback
  */
 stream.WritableStream.prototype.end =
     function(opt_chunk, opt_encoding, opt_callback) {};
@@ -233,94 +241,43 @@ stream.WritableStream.prototype.end =
 
 /**
  * @constructor
- * @extends {events.EventEmitter}
- * @implements {stream.IReadableStream}
+ * @extends {stream.ReadableStream}
  * @implements {stream.IWritableStream}
  */
 stream.Duplex = function() {};
 
 
 /**
- * @inheritDoc
+ * @param {(!Buffer|string)} chunk
+ * @param {string=} opt_encoding
+ * @param {Function=} opt_callback
  */
-stream.Duplex.prototype.read = function(opt_size) {};
+stream.Duplex.prototype.write = function(chunk, opt_encoding, opt_callback) {};
 
 
 /**
- * @inheritDoc
- */
-stream.Duplex.prototype.setEncoding = function(encoding) {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.resume = function() {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.pause = function() {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.isPaused = function() {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.pipe = function(destination, opt_options) {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.unpipe = function(opt_destination) {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.unshift = function(chunk) {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.wrap = function(stream) {};
-
-
-/**
- * @inheritDoc
- */
-stream.Duplex.prototype.write =
-    function(chunk, opt_encoding, opt_callback) {};
-
-
-/**
- * @inheritDoc
+ *
  */
 stream.Duplex.prototype.cork = function() {};
 
 
 /**
- * @inheritDoc
+ *
  */
 stream.Duplex.prototype.uncork = function() {};
 
 
 /**
- * @inheritDoc
+ * @param {string} encoding
+ * @return {boolean}
  */
 stream.Duplex.prototype.setDefaultEncoding = function(encoding) {};
 
 
 /**
- * @inheritDoc
+ * @param {(!Buffer|string)=} opt_chunk
+ * @param {string=} opt_encoding
+ * @param {Function=} opt_callback
  */
 stream.Duplex.prototype.end =
     function(opt_chunk, opt_encoding, opt_callback) {};

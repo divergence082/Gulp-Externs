@@ -115,8 +115,7 @@ http.Server.prototype.setTimeout = function(msecs, callback) {};
  * @event close
  * @event finish
  * @constructor
- * @extends {events.EventEmitter}
- * @implements {stream.IWritableStream}
+ * @extends {stream.WritableStream}
  */
 http.ServerResponse = function() {};
 
@@ -185,16 +184,6 @@ http.ServerResponse.prototype.getHeader = function(name) {};
  * @param {string} name
  */
 http.ServerResponse.prototype.removeHeader = function(name) {};
-
-
-/**
- * @param {(string|!Buffer)} chunk
- * @param {string=} opt_encoding
- * @param {Function=} opt_callback
- * @return {boolean}
- */
-http.ServerResponse.prototype.write = 
-    function(chunk, opt_encoding, opt_callback) {};
 
 
 /**
@@ -269,7 +258,6 @@ http.Agent.prototype.getName = function(options) {};
  * @event upgrade
  * @event continue
  * @constructor
- * @extends {events.EventEmitter}
  * @extends {stream.WritableStream}
  */
 http.ClientRequest = function() {};
@@ -279,24 +267,6 @@ http.ClientRequest = function() {};
  * 
  */
 http.ClientRequest.prototype.flushHeaders = function() {};
-
-
-/**
- * @param {(string|!Buffer|)} chunk
- * @param {string=} opt_encoding
- * @param {Function=} opt_callback
- */
-http.ClientRequest.prototype.write = 
-    function(chunk, opt_encoding, opt_callback) {};
-
-
-/**
- * @param {(string|!Buffer)=} opt_data
- * @param {string=} opt_encoding
- * @param {Function=} opt_callback
- */
-http.ClientRequest.prototype.end = 
-    function(opt_data, opt_encoding, opt_callback) {};
 
 
 /**
