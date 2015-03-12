@@ -1,6 +1,14 @@
 
 
 /**
+ * https://nodejs.org/docs/v0.12.0/api/http.html
+ *
+ * depends on:
+ *      events.js
+ *      stream.js
+ *      net.js
+ *      buffer.js
+ *
  * @namespace
  */
 var http = {};
@@ -107,7 +115,7 @@ http.Server.prototype.setTimeout = function(msecs, callback) {};
  * @event close
  * @event finish
  * @constructor
- * @extends {events.EventEmitter]
+ * @extends {events.EventEmitter}
  * @implements {stream.IWritableStream}
  */
 http.ServerResponse = function() {};
@@ -146,7 +154,7 @@ http.ServerResponse.prototype.writeContinue = function() {};
 /**
  * @param {number} statusCode
  * @param {string=} opt_statusMessage
- * @param {!Object} opt_headers
+ * @param {!Object=} opt_headers
  */
 http.ServerResponse.prototype.writeHead = 
     function(statusCode, opt_statusMessage, opt_headers) {};
@@ -180,7 +188,7 @@ http.ServerResponse.prototype.removeHeader = function(name) {};
 
 
 /**
- * @param {(string|!Buffer|)} chunk
+ * @param {(string|!Buffer)} chunk
  * @param {string=} opt_encoding
  * @param {Function=} opt_callback
  * @return {boolean}
@@ -261,8 +269,8 @@ http.Agent.prototype.getName = function(options) {};
  * @event upgrade
  * @event continue
  * @constructor
- * @extends {events.EventEmitter]
- * @extends {stream.WritableStream]
+ * @extends {events.EventEmitter}
+ * @extends {stream.WritableStream}
  */
 http.ClientRequest = function() {};
 
