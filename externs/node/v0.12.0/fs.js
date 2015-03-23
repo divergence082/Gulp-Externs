@@ -462,7 +462,7 @@ fs.readFileSync = function(filename, opt_options) {};
  * @param {string} filename
  * @param {(string|!Buffer)} data
  * @param {!Object} options
- * @param {!function(?Error)} callback
+ * @param {!function(?Error, ?(string|!Buffer))} callback
  */
 fs.writeFile = function(filename, data, options, callback) {};
 
@@ -495,7 +495,7 @@ fs.appendFileSync = function(filename, data, opt_options) {};
 /**
  * @param {string} filename
  * @param {!Object} options
- * @param {!function(!fs.Stat, !fs.Stat)} listener
+ * @param {!function(!fs.Stats, !fs.Stats)} listener
  */
 fs.watchFile = function(filename, options, listener) {};
 
