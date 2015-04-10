@@ -11,7 +11,7 @@ var gulp = require('gulp');
 var externs = require('gulp-externs');
 
 
-gulp.task('externs', function() {
+return gulp.task('externs', function() {
   gulp.src('./bin/index.js')
       .pipe(externs.extract())
       .pipe(gulp.dest('./externs'))
